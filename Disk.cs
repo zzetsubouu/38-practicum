@@ -27,8 +27,15 @@ namespace _38_practicum
         public void PrintInfo()
         {
             Console.WriteLine($"Круг: Стороны - радиус = {Radius}");
-            Console.WriteLine($"Периметр: {Perimeter()}");
-            Console.WriteLine($"Площадь: {Area()}");
+            Console.WriteLine($"Периметр: {Perimeter():F2}");
+            Console.WriteLine($"Площадь: {Area():F2}");
+        }
+        public static Disk Create()
+        {
+            Console.Clear();
+            Console.Write("Введите радиус: ");
+            int radius = int.Parse(Console.ReadLine());
+            return new Disk(radius);
         }
     }
 }

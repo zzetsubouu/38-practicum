@@ -49,8 +49,19 @@ namespace _38_practicum
         public void PrintInfo()
         {
             Console.WriteLine($"Треугольник: Стороны - {side1}, {side2}, {side3}");
-            Console.WriteLine($"Периметр: {Perimeter()}");
-            Console.WriteLine($"Площадь: {Area()}");
+            Console.WriteLine($"Периметр: {Perimeter():F2}");
+            Console.WriteLine($"Площадь: {Area():F2}");
+        }
+        public static Triangle Create()
+        {
+            Console.Clear();
+            Console.Write("Введите 1 сторону: ");
+            int side1 = int.Parse(Console.ReadLine());
+            Console.Write("Введите 2 сторону: ");
+            int side2 = int.Parse(Console.ReadLine());
+            Console.Write("Введите 3 сторону: ");
+            int side3 = int.Parse(Console.ReadLine());
+            return new Triangle(side1, side2,side3);
         }
     }
 }
