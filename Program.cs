@@ -10,6 +10,14 @@ namespace _38_practicum
     {
         static void Main(string[] args)
         {
+            List<IShape> shapes = new List<IShape>();
+            shapes.Add(new Triangle(3, 4, 5));
+            shapes.Add(new Disk(10));
+            foreach (var figure in shapes)
+            {
+                figure.PrintInfo();
+            }
+            Console.ReadKey();
         }
     }
 }
